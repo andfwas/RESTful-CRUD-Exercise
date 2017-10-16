@@ -1,6 +1,3 @@
-const environment = process.env.NODE_ENV || 'development'
-const config = require('./knexfile.js')[environment]
-
 module.exports = {
 
   development: {
@@ -9,6 +6,6 @@ module.exports = {
   },
   production: {
     client: 'pg',
-    connection: process.env.DB_URL
+    connection: process.env.DATABASE_URL
   }
 };
